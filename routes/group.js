@@ -1,6 +1,10 @@
 /**
  * @module
  * @author zccz14 <zccz14@outlook.com>
+ * @requires lib/user_group_create
+ * @requires lib/user_group_update
+ * @requires lib/user_group_invite
+ * @requires lib/user_group_accept
  */
 const GroupRouter = require('express').Router();
 

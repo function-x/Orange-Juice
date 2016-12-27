@@ -1,6 +1,10 @@
 /**
  * @module
  * @author zccz14 <zccz14@outlook.com>
+ * @requires lib/submission_create
+ * @requires lib/submission_detail
+ * @requires lib/submission_retrieve
+ * @requires lib/submission_sentence_update
  */
 
 const SubmissionRouter = require('express').Router();

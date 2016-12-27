@@ -1,6 +1,10 @@
 /**
  * @module
  * @author zccz14 <zccz14@outlook.com>
+ * @requires lib/problem_list_create
+ * @requires lib/problem_list_detail
+ * @requires lib/problem_list_problem_create
+ * @requires lib/problem_list_retrieve
  */
 
 const ProblemListRouter = require('express').Router();

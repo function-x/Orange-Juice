@@ -1,6 +1,11 @@
 /**
  * @module
  * @author zccz14 <zccz14@outlook.com>
+ * @requires lib/problem_create
+ * @requires lib/problem_retrieve
+ * @requires lib/problem_update
+ * @requires lib/problem_delete
+ * @requires lib/problem_detail
  */
 const ProblemRouter = require('express').Router();
 
