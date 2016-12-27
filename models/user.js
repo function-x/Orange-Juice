@@ -1,1 +1,0 @@
-module.exports = require('mongoose').model('user', require('../schemas/user'));

@@ -20,37 +20,32 @@
  * @member
  */
 const configuration = {
-  "environment": "development",
-  user: {
-    password: {minimumLength: 7, minimumLowercaseLetter: 1, minimumNumeral: 1}
-  },
   originFrontEnds: [
-    "https://function-x.github.io",  // Allow API ref
-    "http://127.0.0.1:8080", // Temporarily Local Debugging
-    "http://localhost:8080", // Temporarily Local Debugging
+    'https://function-x.github.io',  // Allow API ref
+    'http://127.0.0.1:8080', // Temporarily Local Debugging
+    'http://localhost:8080', // Temporarily Local Debugging
   ],
   system: {
-    assets: {path: require('path').join(__dirname, 'assets')},
+    assets: { path: require('path').join(__dirname, 'assets') },
     mongodb: {
-      URI: "mongodb://" + (process.env.MONGO_SERVER || "localhost:27017") +
-               "/OrangeJuice"
+      URI: 'mongodb://' + (process.env.MONGO_SERVER || 'localhost:27017') + '/OrangeJuice'
     },
-    morgan: {format: 'dev', options: {}},
+    morgan: { format: 'dev', options: {} },
     // Store the password in encrypted
     // You can customize the hash algorithm
     passwordHash: {
-      store: function(clearPassword) {
+      store: function (clearPassword) {
         // DO NOT CHANGE IT after deployed!!!
         // Or your users should reset their password
         return require('crypto')
-            .createHash('sha1')  // Hash Algorithm
-            .update(clearPassword)
-            .digest('hex');
+          .createHash('sha1')  // Hash Algorithm
+          .update(clearPassword)
+          .digest('hex');
       },
       // return true if the clearPassword is true
-      verify: function(clearPassword, encryptedPassword) {
+      verify: function (clearPassword, encryptedPassword) {
         return configuration.system.passwordHash.store(clearPassword) ===
-               encryptedPassword;
+          encryptedPassword;
       }
     },
     session: {

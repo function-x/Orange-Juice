@@ -12,9 +12,7 @@ ProblemListRouter.get('/', require('../lib/problem_list_retrieve'));
 
 ProblemListRouter.get('/:problemListId', require('../lib/problem_list_detail'));
 
+ProblemListRouter.post('/:problemListId/problem', require('../lib/require_login'));
 ProblemListRouter.post('/:problemListId/problem', require('../lib/problem_list_problem_create'));
-
-ProblemListRouter.put(':/_id', require('../lib/require_login'));
-ProblemListRouter.put('/:_id', require('../lib/problem_list_update'));
 
 module.exports = ProblemListRouter;
