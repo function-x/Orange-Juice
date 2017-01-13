@@ -4,7 +4,7 @@
   "description": "An opensource API Server of Online Judge",
   "main": "index.js",
   "scripts": {
-    "test": "npm run cover && npm run docs",
+    "test": "tsc && npm run cover && npm run docs",
     "start": "node built/index.js",
     "cover": "istanbul cover node_modules/mocha/bin/_mocha -- built/test",
     "jsdoc": "jsdoc -c conf.json",
@@ -44,6 +44,7 @@
     "istanbul": "^0.4.5",
     "jsdoc": "^3.4.3",
     "mocha": "^3.1.2",
-    "supertest": "^2.0.1"
+    "supertest": "^2.0.1",
+    "typescript": "^2.1.5"
   }
 }
