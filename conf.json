@@ -1,12 +1,13 @@
 {
     "source": {
         "include": [
-            ".",
+            "./built",
             "./readme.md"
         ],
         "exclude": [
             "node_modules",
-            "docs"
+            "docs",
+            "src"
         ]
     },
     "opts": {

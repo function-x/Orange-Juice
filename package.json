@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "npm run cover && npm run docs",
-    "start": "node index.js",
-    "cover": "istanbul cover node_modules/mocha/bin/_mocha",
+    "start": "node built/index.js",
+    "cover": "istanbul cover node_modules/mocha/bin/_mocha -- built/test",
     "jsdoc": "jsdoc -c conf.json",
-    "apidoc": "apidoc -i lib -o docs/api",
+    "apidoc": "apidoc -i built/lib -o docs/api",
     "docs": "npm run jsdoc && npm run apidoc"
   },
   "repository": {
